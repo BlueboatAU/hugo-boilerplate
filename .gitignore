@@ -1,6 +1,7 @@
 
 # hugo
-public/
+hugo/public/
+hugo/assets/dist/
 
 # Dependency directories
 node_modules/

@@ -1,18 +1,29 @@
 {
-  "name": "hugo-boiler",
-  "version": "1.0.0",
-  "description": "a hugo boilerplate for blueboat",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "@guyaldous1",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.1.0"
-  }
+   "name":"hugo-boiler",
+   "version":"1.0.0",
+   "description":"a hugo boilerplate for blueboat",
+   "scripts":{
+      "dev":"run-p gulp hugo open",
+      "gulp":"gulp watch",
+      "hugo":"hugo server -s hugo -vw",
+      "open":"open http://localhost:1313",
+      "build":"run-s gulp-build hugo-build",
+      "hugo-build":"hugo -s hugo -v",
+      "gulp-build":"gulp build"
+   },
+   "author":"@guyaldous1",
+   "license":"ISC",
+   "devDependencies":{
+      "@babel/core":"^7.9.0",
+      "@babel/preset-env":"^7.9.5",
+      "autoprefixer":"^9.7.6",
+      "cssnano":"^4.1.10",
+      "del":"^5.1.0",
+      "gulp":"^4.0.2",
+      "gulp-babel":"^8.0.0",
+      "gulp-postcss":"^8.0.0",
+      "gulp-sass":"^4.1.0",
+      "jquery":"^3.5.0",
+      "npm-run-all":"^4.1.5"
+   }
 }

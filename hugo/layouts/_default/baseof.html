@@ -25,5 +25,7 @@
     {{ partial "footer" . }}
   {{ end }}
   </div>
+  {{ $scripts := resources.Get "dist/js/app.js" | fingerprint }}
+    <script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
 </body>
 </html>

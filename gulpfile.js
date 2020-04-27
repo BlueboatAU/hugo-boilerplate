@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 const postcss = require('gulp-postcss');
 const del = require('del');
 // const uglify = require('gulp-uglify');
@@ -19,7 +20,7 @@ var css = {
   processors: [
     require('autoprefixer'),
     // require('css-mqpacker'),
-    // require('cssnano')
+    require('cssnano')
   ]
 };
 
@@ -41,11 +42,27 @@ gulp.task('styles', () => {
 });
 
 
+
+gulp.task('scripts', () => {
+	return gulp.src('src/js/app.js')
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(gulp.dest(`${distTarget}/js`))
+});
+
+//
+// gulp.task('scripts', () => {
+//   return gulp.src('src/js/app.js')
+//     .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
+//     .pipe(gulp.dest(`${distTarget}/js`));
+// });
+
 //Useful Tasks
-gulp.task('default', gulp.series(['styles']));
+gulp.task('build', gulp.series(['clean','styles','scripts']));
 
 gulp.task('watch', () => {
-    gulp.watch('src/**]', (done) => {
-        gulp.series(['clean','styles'])(done);
+    gulp.watch('src/**', (done) => {
+        gulp.series(['clean','styles','scripts'])(done);
     });
 });
