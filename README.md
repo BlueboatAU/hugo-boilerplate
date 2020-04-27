@@ -12,3 +12,11 @@ build with:
 npm run build
 
 deploy hugo/public
+
+
+##Libraries
+gulp, babel and sass for asset creation
+
+hugo for static site generation
+
+bootstrap and normalise for SASS boilerplate
