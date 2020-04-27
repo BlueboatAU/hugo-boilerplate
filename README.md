@@ -2,19 +2,20 @@
 
 A boilerplate for hugo websites using gulp, babel and sass.
 
-run directly after download:
+#### run directly after download:
 npm install
 
-develop with:
+#### develop with:
 npm run dev
 
-build with:
+#### build with
 npm run build
 
-deploy hugo/public
+#### deploy 
+hugo/public
 
 
-##Libraries
+## Libraries
 gulp, babel and sass for asset creation
 
 hugo for static site generation
