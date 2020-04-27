@@ -1,0 +1,13 @@
+{
+  "name": "hugo-boiler",
+  "version": "1.0.0",
+  "description": "a hugo boilerplate for blueboat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@guyaldous1",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

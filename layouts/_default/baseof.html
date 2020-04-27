@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--meta-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{{ block "title" . }}{{ .Title }}{{ end }} | {{ .Site.Title }}</title>
+      <meta name="description" content='{{ block "metadesc" . }}{{ with .Params.metadesc }}{{.}}{{else}}{{ markdownify .Description }}{{end}}{{ end }}'/>
+      <meta name="robots" content='{{ block "metarobots" . }}index, follow{{ end }}'>
+
+    <!--Stylesheets-->
+
+
+  </head>
+  <body>
+    <div id="page-{{.File.UniqueID}}">
+  {{ partial "header" . }}
+
+  {{ block "main" . }}
+  {{ end }}
+
+  {{ block "footer" . }}
+    {{ partial "footer" . }}
+  {{ end }}
+  </div>
+</body>
+</html>

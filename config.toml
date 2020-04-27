@@ -1,0 +1,11 @@
+baseURL = "https://thisisqueens.college/"
+languageCode = "en-au"
+title = "This is Queens"
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[params]
+  localphone = "(03) 9349 0500"
+
+[permalinks]
+  posts = "/:section/:title/"
