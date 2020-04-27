@@ -10,11 +10,12 @@
       <meta name="robots" content='{{ block "metarobots" . }}index, follow{{ end }}'>
 
     <!--Stylesheets-->
-
+    {{ $style := resources.Get "dist/css/style.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   </head>
   <body>
-    <div id="page-{{.File.UniqueID}}">
+    <div id="page-{{.File.UniqueID}}" class="site-wrapper">
   {{ partial "header" . }}
 
   {{ block "main" . }}
