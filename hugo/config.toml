@@ -2,7 +2,10 @@ baseURL = "https://thisisqueens.college/"
 languageCode = "en-au"
 title = "This is Queens"
 
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+# disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[taxonomies]
+  category = "categories"
 
 [params]
   localphone = "(03) 9349 0500"

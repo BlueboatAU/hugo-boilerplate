@@ -1,3 +1,8 @@
 <div id="page-header">
   THIS IS THE HEADER
+  <ul>
+    {{ range .Site.Taxonomies.categories }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+</ul>
 </div>

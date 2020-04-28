@@ -1,5 +1,5 @@
 ---
-title: "Post Page"
+title: "Other Page"
 date: 20 APR 2020
 draft: false
 ---
