@@ -9,6 +9,7 @@ title = "This is Queens"
 
 [params]
   localphone = "(03) 9349 0500"
+  description = "A hugo site description"
 
 [permalinks]
   posts = "/:section/:title/"

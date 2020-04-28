@@ -8,7 +8,7 @@
       "hugo":"hugo server -s hugo -vw",
       "open":"open http://localhost:1313",
       "build":"run-s gulp-build hugo-build",
-      "hugo-build":"hugo -s hugo -v",
+      "hugo-build":"hugo --minify -s hugo -v",
       "gulp-build":"gulp build"
    },
    "author":"@guyaldous1",
