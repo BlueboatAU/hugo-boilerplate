@@ -2,30 +2,38 @@
 <html>
 
 <head>
-    <!--meta-->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>{{ block "title" . }}{{ .Title }}{{ end }} | {{ .Site.Title }}</title>
-      <meta name="description" content='{{ block "metadesc" . }}{{ with .Params.metadesc }}{{.}}{{else}}{{ markdownify .Description }}{{end}}{{ end }}'/>
-      <meta name="robots" content='{{ block "metarobots" . }}index, follow{{ end }}'>
+  <!--meta-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }} | {{ .Site.Title }}</title>
+  <meta name="description" content='{{ block "metadesc" . }}{{ markdownify .Description }}{{ end }}' />
+  <meta name="robots" content='{{ block "metarobots" . }}index, follow{{ end }}'>
 
-    <!--Stylesheets-->
-    {{ $style := resources.Get "dist/css/style.css" | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <!--Stylesheets-->
+  {{ $style := resources.Get "dist/css/style.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-  </head>
-  <body>
-    <div id="page-{{.File.UniqueID}}" class="site-wrapper">
-  {{ partial "header" . }}
+</head>
 
-  {{ block "main" . }}
-  {{ end }}
+<body>
+  <div id="page-{{.File.UniqueID}}" class="site-wrapper">
+    {{ partial "header" . }}
 
-  {{ block "footer" . }}
+    <div id="main-wrapper" class="some-height">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ block "footer" . }}
     {{ partial "footer" . }}
-  {{ end }}
+    {{ end }}
   </div>
+
+<!--Scripts-->
+  {{ partial "scripts" . }}
   {{ $scripts := resources.Get "dist/js/app.js" | fingerprint }}
-    <script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
+  <script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
+
 </body>
+
 </html>
