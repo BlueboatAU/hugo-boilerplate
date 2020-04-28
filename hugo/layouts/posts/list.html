@@ -1,0 +1,15 @@
+{{define "main"}}
+
+{{ .Title }}
+
+<div class="container">
+  <div class="row">
+{{range where .Pages "Type" "posts" }}
+    <div class="col-md-6">
+      <h1>{{.Title}}</h1>
+    </div>
+{{ end }}
+  </div>
+</div>
+
+{{end}}
