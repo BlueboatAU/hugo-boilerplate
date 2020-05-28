@@ -9,7 +9,9 @@
       "open":"open http://localhost:1313",
       "build":"run-s gulp-build hugo-build",
       "hugo-build":"hugo --minify -s hugo -v",
-      "gulp-build":"gulp build"
+      "gulp-build":"gulp build",
+      "hugo-netlify": "hugo --minify -b $DEPLOY_PRIME_URL -s hugo -v",
+      "netlify": "run-s gulp-build hugo-netlify"
    },
    "author":"@guyaldous1",
    "license":"ISC",
