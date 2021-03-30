@@ -1,55 +1,27 @@
-
+/*!
+Title: A Hugo Site by Studio Blueboat
+Author: Studio Blueboat
+Author URI: https://blueboat.com.au
+*/
 
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
-@import "normalize";
-@import "bootstrap/scss/bootstrap";
-
-/*--------------------------------------------------------------
-# Mixins
---------------------------------------------------------------*/
-@mixin transition($t: 0.2s){
-    -webkit-transition: all $t ease-in-out;
-    -moz-transition: all $t ease-in-out;
-    -ms-transition: all $t ease-in-out;
-    -o-transition: all $t ease-in-out;
-    transition: all $t ease-in-out;
-}
-
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
-
-@mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; /* The Fallback */
-    background: rgba($color, $opacity);
-}
-
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
+// @import "bootstrap/scss/bootstrap";
+// @import "normalize-scss/sass/normalize";
+@import "normalize-scss/sass/normalize/import-now";
+// @import "bootstrap/scss/bootstrap";
+@import "_sass/boostrap";
 
 
-//Variables
-$dark-grey:#333333;
-$med-grey:#989898;
-$light-grey:#e9e9e9;
-$white: #fff;
-$black: #000;
+//BB Imports
+@import "_sass/mixins";
+@import "_sass/variables";
 
-$colour-font-default: $black;
-
-$font-default: Arial, sans-serif;
-// $font-heading:'Galano Grotesque', sans-serif;
 
 
 /*--------------------------------------------------------------
-# Styles
+# Globals & Helpers
 --------------------------------------------------------------*/
 
 html{
@@ -57,29 +29,27 @@ html{
 }
 
 body{
-  width: 100vw;
   overflow-x: hidden;
   font-family: $font-default;
-  color:$colour-font-default;
+  color: $colour-font-default;
   font-size: 1rem;
-  line-height: 1.67rem;
+  line-height: 135%;
+  font-weight: 400;
   &.no-scroll{
     overflow: hidden;
   }
 }
 
 .site-wrapper{
-  width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-//Helpers
 .full-height{
   min-height: 100vh;
 }
 
 .almost-full-height{
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 .some-height{
@@ -87,8 +57,40 @@ body{
 }
 
 
-
-
-section#page-header{
-  background: $light-grey;
+#main-wrapper {
+  opacity: 0;
+  @include transition(0.5s);
+  transition-delay: 0.3s;
 }
+
+body.loaded{
+  #main-wrapper{
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+
+.content-style{
+  p{
+    margin-bottom: 1rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
