@@ -3,16 +3,25 @@
 A boilerplate for hugo websites using gulp, babel and sass.
 
 #### run directly after download:
+```
 npm install
+gulp build
+```
 
 #### develop with:
+```
 npm run dev
+```
 
 #### build with
+```
 npm run build
+```
 
-#### deploy 
+#### deploy
+```
 hugo/public
+```
 
 
 ## Libraries
