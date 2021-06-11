@@ -55,7 +55,7 @@ gulp.task("scripts", () => {
 							presets: ['@babel/preset-env'],
 							exclude: 'node_modules/**'
 						}),
-						uglify.uglify(), 
+						uglify.uglify(), 
 					],
 				},
 				{
