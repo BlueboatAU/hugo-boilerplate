@@ -1,7 +1,7 @@
 {
-   "name": "queens-demo",
+   "name": "hugo-demo",
    "version": "1.0.0",
-   "description": "a hugo demo site for the queens college",
+   "description": "a hugo demo site for the studio blueboat",
    "scripts": {
       "dev": "run-p gulp hugo",
       "gulp": "gulp watch",
@@ -40,7 +40,7 @@
       "rollup-plugin-uglify": "^6.0.4"
    },
    "dependencies": {
-      "bootstrap": "^4.6.0",
+      "bootstrap": "^5.0.2",
       "normalize-scss": "^7.0.1"
    }
 }

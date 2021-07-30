@@ -1,6 +1,6 @@
-baseURL = "https://thisisqueens.college/"
+baseURL = "https://demo.hugp/"
 languageCode = "en-au"
-title = "This is Queens"
+title = "Welcome to the Demo"
 
 # disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
@@ -8,7 +8,7 @@ title = "This is Queens"
   category = "categories"
 
 [params]
-  localphone = "(03) 9349 0500"
+  localphone = "(03) 9191 1234"
   description = "A hugo site description"
 
 [permalinks]
