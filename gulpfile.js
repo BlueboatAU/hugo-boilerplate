@@ -1,5 +1,8 @@
 const gulp = require("gulp");
-const sass = require("gulp-sass");
+// const dartSass = require('sass');
+const nodeSass = require("node-sass");
+const gulpSass = require("gulp-sass");
+const sass = gulpSass(nodeSass);
 const postcss = require("gulp-postcss");
 const del = require("del");
 const rollup = require("gulp-better-rollup");
